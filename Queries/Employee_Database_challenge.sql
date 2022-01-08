@@ -16,7 +16,7 @@ SELECT * from retirement_titles;
 -- remove duplicates
 SELECT DISTINCT ON (emp_no) emp_no,
 first_name,
-last_name
+last_name,
 title
 
 INTO unique_titles
@@ -25,3 +25,13 @@ WHERE (to_date = '9999-01-01')
 ORDER BY emp_no ASC, to_date DESC;
 
 SELECT * from unique_titles;
+
+
+-- about to retire
+SELECT COUNT(emp_no),title
+INTO retiring_titles
+FROM unique_titles
+GROUP BY title
+ORDER BY COUNT DESC;
+
+SELECT * from retiring_titles;
