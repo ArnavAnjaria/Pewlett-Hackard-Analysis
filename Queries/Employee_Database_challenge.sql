@@ -27,6 +27,7 @@ ORDER BY emp_no ASC, to_date DESC;
 
 SELECT * from unique_titles;
 
+SELECT COUNT(*)FROM unique_titles;
 
 -- about to retire
 SELECT 
@@ -57,3 +58,5 @@ WHERE (e.birth_date BETWEEN '1965-01-01' AND '1965-12-31') AND (de.to_date = '99
 ORDER BY emp_no ;
 
 SELECT * from mentorship_eligibilty;
+
+SELECT COUNT(*)FROM mentorship_eligibilty;
